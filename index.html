@@ -1,0 +1,365 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="ruang kecil buat cerita, main, dan nyimpen hal-hal yang berarti.">
+  <title>LOVE.exe — little things, just us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="LOVE.exe home">
+      <span class="brand-mark">L.</span>
+      <span>LOVE<span class="muted">.exe</span></span>
+    </a>
+
+    <div class="topbar-center">
+      <span class="status-dot"></span>
+      <span id="topStatus">a little corner of the internet</span>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="icon-button" id="soundToggle" aria-label="Toggle sound" title="Suara">
+        <span id="soundIcon">♫</span>
+      </button>
+      <button class="icon-button mobile-menu-button" id="mobileMenu" aria-label="Buka menu">☰</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-heading">MENU UTAMA</div>
+      <nav class="navigation" aria-label="Navigasi utama">
+        <button class="nav-link active" data-page="home"><span class="nav-icon">⌂</span> home <span class="nav-index">01</span></button>
+        <button class="nav-link" data-page="story"><span class="nav-icon">◷</span> our story <span class="nav-index">02</span></button>
+        <button class="nav-link" data-page="confess"><span class="nav-icon">♡</span> the question <span class="nav-index">03</span></button>
+        <button class="nav-link" data-page="quiz"><span class="nav-icon">?</span> how well do you know me? <span class="nav-index">04</span></button>
+        <button class="nav-link" data-page="memory"><span class="nav-icon">▧</span> memory match <span class="nav-index">05</span></button>
+        <button class="nav-link" data-page="wordle"><span class="nav-icon">⌗</span> secret word <span class="nav-index">06</span></button>
+        <button class="nav-link" data-page="catch"><span class="nav-icon">✧</span> catch the stars <span class="nav-index">07</span></button>
+        <button class="nav-link" data-page="compat"><span class="nav-icon">∞</span> compatibility lab <span class="nav-index">08</span></button>
+        <button class="nav-link" data-page="adventure"><span class="nav-icon">↗</span> tiny adventure <span class="nav-index">09</span></button>
+        <button class="nav-link" data-page="doodle"><span class="nav-icon">✎</span> doodle together <span class="nav-index">10</span></button>
+        <button class="nav-link" data-page="letter"><span class="nav-icon">✉</span> little letters <span class="nav-index">11</span></button>
+        <button class="nav-link" data-page="card"><span class="nav-icon">▤</span> make a card <span class="nav-index">12</span></button>
+        <button class="nav-link" data-page="playlist"><span class="nav-icon">♫</span> soundtrack <span class="nav-index">13</span></button>
+        <button class="nav-link" data-page="reasons"><span class="nav-icon">✳</span> little reasons <span class="nav-index">14</span></button>
+        <button class="nav-link" data-page="notes"><span class="nav-icon">☷</span> random thoughts <span class="nav-index">15</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-quote">
+          <span class="quote-mark">“</span>
+          <p>some people make ordinary days feel a little less ordinary.</p>
+          <span class="quote-author">— just a thought</span>
+        </div>
+        <div class="sidebar-footer">
+          <span class="tiny-live"></span>
+          <span>running on little feelings</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="page active" id="page-home" data-title="home">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> A SMALL PLACE, A BIG FEELING</div>
+            <h1>not everything<br>needs to be <span class="serif-word">said.</span></h1>
+            <p class="hero-description">
+              tapi beberapa hal emang pengen disimpen di suatu tempat.
+              bukan karena rahasia besar, cuma karena rasanya sayang kalau
+              lewat gitu aja. jadi... ya, jadilah website ini.
+            </p>
+            <div class="hero-buttons">
+              <button class="button button-light" data-go="story">jelajahi dulu <span>↗</span></button>
+              <button class="button button-ghost" data-go="confess">ada pertanyaan <span>♡</span></button>
+            </div>
+            <div class="hero-meta">
+              <span><span class="status-dot"></span> no rush, take your time</span>
+              <span class="mono">EST. JUST NOW</span>
+            </div>
+          </div>
+
+          <div class="hero-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="hero-core">
+              <span class="core-top">A NOTE FOR YOU</span>
+              <div class="core-symbol">∞</div>
+              <span class="core-bottom">nothing too loud.</span>
+            </div>
+            <div class="floating-label label-top"><span class="mini-dot"></span> somewhere between</div>
+            <div class="floating-label label-bottom">random thoughts / 001</div>
+            <div class="spark spark-one">✳</div>
+            <div class="spark spark-two">✧</div>
+            <div class="spark spark-three">·</div>
+          </div>
+        </div>
+
+        <div class="section-divider">
+          <span>THE LITTLE INDEX</span>
+          <span class="divider-line"></span>
+          <span class="mono">15 PLACES TO EXPLORE</span>
+        </div>
+
+        <div class="feature-grid">
+          <button class="feature-card" data-go="story">
+            <span class="feature-number">01 / STORY</span>
+            <span class="feature-symbol">◷</span>
+            <strong>cerita kecil</strong>
+            <span>buat hal-hal yang nggak perlu buru-buru.</span>
+            <span class="feature-arrow">↗</span>
+          </button>
+          <button class="feature-card" data-go="quiz">
+            <span class="feature-number">02 / QUIZ</span>
+            <span class="feature-symbol">?</span>
+            <strong>seberapa kenal?</strong>
+            <span>tes kecil, jangan nyontek google ya.</span>
+            <span class="feature-arrow">↗</span>
+          </button>
+          <button class="feature-card" data-go="memory">
+            <span class="feature-number">03 / GAME</span>
+            <span class="feature-symbol">▦</span>
+            <strong>memory match</strong>
+            <span>cari pasangan kartu yang sama.</span>
+            <span class="feature-arrow">↗</span>
+          </button>
+          <button class="feature-card" data-go="adventure">
+            <span class="feature-number">04 / ADVENTURE</span>
+            <span class="feature-symbol">↗</span>
+            <strong>tiny adventure</strong>
+            <span>pilihan kecil, cerita yang beda.</span>
+            <span class="feature-arrow">↗</span>
+          </button>
+        </div>
+
+        <div class="home-bottom">
+          <div class="quote-panel">
+            <span class="eyebrow">A THOUGHT FOR TODAY</span>
+            <p id="homeQuote">"kadang, hal sederhana justru paling lama diinget."</p>
+            <button class="text-button" id="changeQuote">ganti kutipan ↻</button>
+          </div>
+          <div class="counter-panel">
+            <span class="eyebrow">CURRENT VIBE</span>
+            <div class="vibe-value"><span class="vibe-dot"></span><span id="vibeText">calm, probably</span></div>
+            <p>nggak ada deadline buat menikmati halaman ini.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-story" data-title="our story">
+        <div class="page-heading">
+          <div class="eyebrow">CHAPTER 01 / THE BEGINNING</div>
+          <h2>so, here's <span class="serif-word">the thing.</span></h2>
+          <p>nggak harus ada cerita yang dramatis buat sesuatu jadi berarti.</p>
+        </div>
+        <div class="story-layout">
+          <article class="story-main panel">
+            <div class="story-date mono">A NOTE, NOT A TIMELINE</div>
+            <h3>nggak tahu mulai dari mana.</h3>
+            <p>
+              mungkin dari obrolan receh. mungkin dari satu hal kecil yang
+              sebenernya gampang dilupain, tapi entah kenapa malah keinget
+              terus. atau mungkin dari momen ketika hari yang biasa aja
+              mendadak punya bagian yang pengen diulang.
+            </p>
+            <p>
+              nggak semua hal harus langsung dikasih nama. kadang cukup
+              dijalanin, dinikmati, terus lihat nanti arahnya ke mana.
+              nggak perlu bikin teori konspirasi cuma gara-gara satu chat
+              dibales pake titik. santai dulu, detektif.
+            </p>
+            <p>
+              yang jelas, halaman ini dibuat buat nyimpen beberapa hal
+              kecil. bukan buat bikin semuanya jadi serius, bukan juga
+              buat maksa siapa pun ngerasa sesuatu. cuma ruang kecil buat
+              bilang, "eh, ini lumayan berarti buat gue."
+            </p>
+            <div class="story-signature">written in a quiet moment <span>✳</span></div>
+          </article>
+          <aside class="story-side">
+            <div class="stat-card panel">
+              <span class="eyebrow">THE SIMPLE STUFF</span>
+              <div class="stat-number">∞</div>
+              <p>hal kecil yang masih bisa diceritain.</p>
+            </div>
+            <div class="mini-note panel">
+              <span class="note-pin">✳</span>
+              <span class="mono">REMINDER #001</span>
+              <p>nggak semua momen bagus harus difoto. beberapa cukup diinget.</p>
+            </div>
+            <div class="mini-note panel">
+              <span class="note-pin">✧</span>
+              <span class="mono">REMINDER #002</span>
+              <p>jadi diri sendiri aja. versi asli nggak perlu update tiap hari.</p>
+            </div>
+          </aside>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-point">01</span><div><strong>the first hello</strong><p>awal dari sesuatu seringnya biasa aja. baru belakangan terasa beda.</p></div></div>
+          <div class="timeline-item"><span class="timeline-point">02</span><div><strong>the random conversations</strong><p>obrolan nggak penting yang entah kenapa jadi pengen dilanjutin.</p></div></div>
+          <div class="timeline-item"><span class="timeline-point">03</span><div><strong>the little details</strong><p>hal yang orang lain mungkin lewatkan, tapi kita malah inget.</p></div></div>
+          <div class="timeline-item"><span class="timeline-point">04</span><div><strong>whatever comes next</strong><p>belum ditulis. biar hidup yang ngisi bagian ini.</p></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-confess" data-title="the question">
+        <div class="page-heading">
+          <div class="eyebrow">CHAPTER 02 / ONE QUESTION</div>
+          <h2>can i ask you<br><span class="serif-word">something?</span></h2>
+          <p>tenang, bukan soal matematika. nggak ada akar-akar persamaan di sini.</p>
+        </div>
+        <div class="confess-card panel">
+          <div class="confess-decoration">♡</div>
+          <span class="mono">PLEASE READ AT YOUR OWN PACE</span>
+          <h3>jadi gini...</h3>
+          <p>
+            dari semua orang yang bisa diajak ngobrol, ada beberapa orang
+            yang bikin obrolan biasa terasa lebih seru. yang bikin pengen
+            cerita hal receh, kirim sesuatu yang lucu, atau sekadar nanya
+            "udah makan belum?" tanpa alasan yang terlalu rumit.
+          </p>
+          <p>
+            dan sekarang pertanyaannya: <strong>kamu mau nggak jadi salah
+            satu orang yang nemenin cerita-cerita kecil itu?</strong>
+          </p>
+          <p class="muted-text">nggak harus jawab sesuai yang aku harapkan. jawaban jujur tetap jawaban terbaik.</p>
+          <div class="confess-actions">
+            <button class="button button-light" id="answerYes">boleh, emang kenapa? ♡</button>
+            <button class="button button-ghost" id="answerMaybe">kasih aku waktu</button>
+          </div>
+          <div id="confessResponse" class="response-box" aria-live="polite" hidden></div>
+        </div>
+        <div class="small-disclaimer">NO PRESSURE. NO DRAMA. JUST A LITTLE HONESTY.</div>
+      </section>
+
+      <section class="page" id="page-quiz" data-title="how well do you know me?">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 01 / THE QUIZ</div>
+          <h2>how well do you <span class="serif-word">know me?</span></h2>
+          <p>jawab berdasarkan tebakanmu. kalau salah ya nggak kena denda kok.</p>
+        </div>
+        <div class="game-layout">
+          <div class="quiz-card panel">
+            <div class="game-progress"><span id="quizProgress">QUESTION 01 / 05</span><span id="quizScore">SCORE: 0</span></div>
+            <div class="progress-track"><div id="quizProgressBar" class="progress-fill"></div></div>
+            <h3 id="quizQuestion">kalau lagi capek, aku paling pengen...</h3>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+            <button class="button button-light full-width" id="quizNext" disabled>lanjut ↗</button>
+          </div>
+          <aside class="game-aside panel">
+            <span class="eyebrow">HOW TO PLAY</span>
+            <div class="aside-symbol">?</div>
+            <p>pilih satu jawaban. tiap jawaban punya poin. beberapa pertanyaan bisa kamu ubah sendiri di bagian pengaturan script.</p>
+            <div class="game-tip"><span>TIP</span><p>nggak ada jawaban yang bikin kamu gagal jadi manusia.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-memory" data-title="memory match">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 02 / MEMORY</div>
+          <h2>little things, <span class="serif-word">matching.</span></h2>
+          <p>cari pasangan simbol yang sama. otak juga butuh pemanasan.</p>
+        </div>
+        <div class="game-toolbar panel">
+          <div><span class="eyebrow">MOVES</span><strong id="memoryMoves">0</strong></div>
+          <div><span class="eyebrow">PAIRS</span><strong id="memoryPairs">0 / 8</strong></div>
+          <div><span class="eyebrow">TIME</span><strong id="memoryTime">00:00</strong></div>
+          <button class="button button-ghost" id="restartMemory">ulang ↻</button>
+        </div>
+        <div class="memory-grid" id="memoryGrid" aria-label="Memory matching cards"></div>
+        <div class="game-message panel" id="memoryMessage">coba buka dua kartu. siapa tahu jodohnya ketemu duluan.</div>
+      </section>
+
+      <section class="page" id="page-wordle" data-title="secret word">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 03 / WORD PUZZLE</div>
+          <h2>find the <span class="serif-word">secret word.</span></h2>
+          <p>ada satu kata tersembunyi. petunjuknya ada, tinggal otak yang kerja.</p>
+        </div>
+        <div class="word-game panel">
+          <div class="word-hint"><span class="eyebrow">CLUE OF THE DAY</span><p id="wordHint">sesuatu yang bikin hari biasa terasa spesial.</p></div>
+          <div class="word-grid" id="wordGrid"></div>
+          <form id="wordForm" class="word-input-row">
+            <input id="wordInput" maxlength="5" autocomplete="off" placeholder="ketik 5 huruf..." aria-label="Tebakan kata" required>
+            <button class="button button-light" type="submit">tebak ↗</button>
+          </form>
+          <div class="word-keyboard" id="wordKeyboard"></div>
+          <div class="game-message" id="wordMessage" aria-live="polite">kata ini punya 5 huruf. gas, coba tebak.</div>
+          <button class="text-button" id="newWord">kata baru ↻</button>
+        </div>
+      </section>
+
+      <section class="page" id="page-catch" data-title="catch the stars">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 04 / REFLEX</div>
+          <h2>catch the <span class="serif-word">little stars.</span></h2>
+          <p>klik bintang yang muncul sebelum waktunya habis. jangan kedip kelamaan.</p>
+        </div>
+        <div class="catch-hud">
+          <div class="hud-cell panel"><span>SCORE</span><strong id="catchScore">000</strong></div>
+          <div class="hud-cell panel"><span>TIME LEFT</span><strong id="catchTime">20s</strong></div>
+          <div class="hud-cell panel"><span>BEST</span><strong id="catchBest">000</strong></div>
+        </div>
+        <div class="catch-arena panel" id="catchArena">
+          <div class="arena-overlay" id="catchOverlay">
+            <div class="arena-center">
+              <span class="arena-symbol">✧</span>
+              <h3 id="catchTitle">ready when you are.</h3>
+              <p id="catchDescription">kumpulin bintang sebanyak mungkin dalam 20 detik.</p>
+              <button class="button button-light" id="startCatch">mulai main ↗</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-compat" data-title="compatibility lab">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 05 / COMPLETELY UNOFFICIAL</div>
+          <h2>compatibility <span class="serif-word">lab.</span></h2>
+          <p>mesin ini 100% nggak ilmiah. jangan dipakai buat menentukan nasib ya.</p>
+        </div>
+        <div class="compat-layout">
+          <div class="compat-card panel">
+            <div class="compat-orbit"><div class="compat-heart">∞</div></div>
+            <label for="nameOne">nama orang pertama</label>
+            <input id="nameOne" placeholder="misalnya: aku" maxlength="24">
+            <label for="nameTwo">nama orang kedua</label>
+            <input id="nameTwo" placeholder="misalnya: kamu" maxlength="24">
+            <button class="button button-light full-width" id="calculateCompat">hitung kecocokan ↗</button>
+          </div>
+          <div class="compat-result panel" id="compatResult">
+            <span class="eyebrow">THE VERY SERIOUS RESULT</span>
+            <div class="compat-percent" id="compatPercent">--<span>%</span></div>
+            <h3 id="compatTitle">hasilnya belum keluar.</h3>
+            <p id="compatDescription">masukin dua nama dulu. mesin ini butuh bahan buat ngarang statistik.</p>
+            <div class="compat-meter"><div id="compatMeterFill"></div></div>
+            <span class="mono" id="compatFootnote">FOR FUN ONLY / NO SCIENCE INVOLVED</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-adventure" data-title="tiny adventure">
+        <div class="page-heading">
+          <div class="eyebrow">MINI GAME 06 / CHOOSE YOUR PATH</div>
+          <h2>a tiny <span class="serif-word">adventure.</span></h2>
+          <p>cerita pendek, beberapa pilihan, dan satu tujuan: cari momen kecil yang menyenangkan.</p>
+        </div>
+        <div class="adventure-layout panel">
+  
